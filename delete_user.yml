@@ -1,0 +1,8 @@
+- hosts: all
+  become: yes
+  tasks:
+    - name: Remove ansadmin
+      user:
+        name: ansadmin
+        state: absent
+        remove: yes

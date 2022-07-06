@@ -1,0 +1,7 @@
+---
+- name: Playbook of master to install apache
+  hosts: all
+  become: true
+  roles:
+  - roles-apache-setup
+

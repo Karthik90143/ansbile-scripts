@@ -1,0 +1,12 @@
+---
+- name: playbok for creating user
+  hosts: webservers
+  become: true
+  vars:
+   user: bunny
+  
+  tasks:
+  - name: creating user {{user}}
+    user:
+     name: "{{user}}"
+

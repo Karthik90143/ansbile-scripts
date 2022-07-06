@@ -1,0 +1,11 @@
+---
+- name: playbok for install multiple packages
+  hosts: webservers
+  become: true
+
+  tasks:
+  - name: installing multiple packages
+    yum:
+     name: ['git', 'make', 'docker', 'tree', 'which', 'wget']
+     state: installed
+

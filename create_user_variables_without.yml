@@ -1,0 +1,12 @@
+---
+- name: playbok for creating user vars without opening file
+  hosts: webservers
+  become: true
+  vars_files:
+  - user.yml
+  
+  tasks:
+  - name: creating user {{user}}
+    user:
+     name: "{{'user', 'user', 'user'}}"
+

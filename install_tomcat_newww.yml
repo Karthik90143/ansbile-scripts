@@ -1,0 +1,10 @@
+---
+- name: playbook just install tomcat
+  hosts: dbservers
+  become: true
+  
+  tasks
+  - name: install tomcat
+    yum:
+     name: tomcat
+     state: installed
